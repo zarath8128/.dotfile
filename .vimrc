@@ -5,6 +5,8 @@
 :set showcmd
 :set tabstop=4
 :set shiftwidth=4
+:set encoding=utf-8
+:set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,ucs-bom,latin1,utf-8
 syntax on
 
 "vim like binary editor
