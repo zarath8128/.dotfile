@@ -1,0 +1,34 @@
+startup_message off
+
+hardstatus on
+caption    always "%?%F%{= wk}%:%{= ww}%?%-w%{=u Wk}%n %t%{-}%+w"
+
+bind q                         eval 'command -c window_operation' 'echo "Entering Window Operatorn Mode"' 
+bind -c window_operation h     eval 'focus left'   'command -c window_operation'
+bind -c window_operation ^h    eval 'resize -h -1' 'command -c window_operation'
+bind -c window_operation -k kl eval 'focus left'   'command -c window_operation'
+bind -c window_operation j     eval 'focus down'   'command -c window_operation'
+bind -c window_operation ^j    eval 'resize -v +1' 'command -c window_operation'
+bind -c window_operation -k kd eval 'focus down'   'command -c window_operation'
+bind -c window_operation k     eval 'focus up'     'command -c window_operation'
+bind -c window_operation ^k    eval 'resize -v -1' 'command -c window_operation'
+bind -c window_operation -k ku eval 'focus up'     'command -c window_operation'
+bind -c window_operation l     eval 'focus right'  'command -c window_operation'
+bind -c window_operation     eval 'resize -h +1' 'command -c window_operation'
+bind -c window_operation -k kr eval 'focus right'  'command -c window_operation'
+bind -c window_operation s     eval 'split'        'command -c window_operation'
+bind -c window_operation v     eval 'split -v'     'command -c window_operation'
+bind -c window_operation p     eval 'prev'         'command -c window_operation'
+bind -c window_operation n     eval 'next'         'command -c window_operation'
+bind -c window_operation c     eval 'screen'       'command -c window_operation'
+bind -c window_operation k     eval 'kill'         'command -c window_operation'
+bind -c window_operation x     eval 'remove'         'command -c window_operation'
+
+bindkey ^Q                     eval 'command -c window_operation' 'echo "Entering Window Operatorn Mode"'
+bindkey ^H                     eval 'focus left'
+bindkey ^J                     eval 'focus down'
+bindkey ^K                     eval 'focus up'
+bindkey ^L                     eval 'focus right'
+bindkey ^N                     eval 'next'
+bindkey ^P                     eval 'prev'
+defscrollback 65536
