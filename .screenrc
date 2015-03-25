@@ -29,6 +29,6 @@ bindkey ^H                     eval 'focus left'
 bindkey ^J                     eval 'focus down'
 bindkey ^K                     eval 'focus up'
 bindkey ^L                     eval 'focus right'
-bindkey ^N                     eval 'next'
-bindkey ^P                     eval 'prev'
+#bindkey ^N                     eval 'next'
+#bindkey ^P                     eval 'prev'
 defscrollback 65536

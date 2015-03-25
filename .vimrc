@@ -9,6 +9,9 @@
 :set fileencodings=iso-2022-jp,cp932,utf-8,sjis,euc-jp,ucs-bom,latin1
 syntax on
 
+:set foldmethod=syntax
+highlight Folded gui=bold term=standout ctermbg=Grey ctermfg=DarkBlue guibg=Grey30 guifg=Grey80
+
 "vim like binary editor
 augroup BinaryEditor
 	autocmd!
@@ -19,3 +22,8 @@ augroup BinaryEditor
 	autocmd BufWritePost * if &binary | silent %!xxd -g 1
 	autocmd BufWritePost * set nomd | endif
 augroup END
+
+:set wildmenu
+:set wildmode=longest,full
+":set shellpipe=\|&\ iconv\ -t\ utf-8\ >\ %s
+:copen
